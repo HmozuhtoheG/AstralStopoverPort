@@ -1,0 +1,2 @@
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Android\Debug\net6.0\GitInfo.cache
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Android\Debug\net6.0\ASP.csproj.AssemblyReference.cache

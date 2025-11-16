@@ -1,0 +1,15 @@
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\GitInfo.cache
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\ASP.csproj.AssemblyReference.cache
+C:\Users\15477\Source\Repos\AstralStopoverPort\Export\Windows\Debug\net6.0\ASP.deps.json
+C:\Users\15477\Source\Repos\AstralStopoverPort\Export\Windows\Debug\net6.0\ASP.dll
+C:\Users\15477\Source\Repos\AstralStopoverPort\Export\Windows\Debug\net6.0\ASP.pdb
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\ASP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\ASP.AssemblyInfoInputs.cache
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\ASP.AssemblyInfo.cs
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\ASP.csproj.CoreCompileInputs.cache
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\ASP.sourcelink.json
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\ASP.csproj.Fody.CopyLocal.cache
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\ASP.dll
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\refint\ASP.dll
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\ASP.pdb
+C:\Users\15477\Source\Repos\AstralStopoverPort\TONX\obj\Windows\Debug\net6.0\ref\ASP.dll

@@ -1,0 +1,198 @@
+is_global = true
+build_property.DesignTimeBuild = true
+build_property.SponsorLinkHero = 
+build_property.ThisAssemblyNamespace = 
+build_property.ThisAssemblyNamespace = 
+build_property.ThisAssemblyVisibility = 
+build_property.GitIsDirty = 1
+build_property.GitThisAssembly = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ASP
+build_property.ProjectDir = C:\Users\15477\source\repos\AstralStopoverPort\TONX\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.AmongUs_GameLibs_Steam = 2025.10.14
+build_property.BepInEx_IL2CPP_MSBuild = 2.1.0-rc.1
+build_property.BepInEx_Unity_IL2CPP = 6.0.0-be.738
+build_property.Costura_Fody = 5.8.0-alpha0098
+build_property.GitInfo = 3.5.0
+build_property.YamlDotNet = 16.3.0
+
+[C:/Program Files/dotnet/sdk/8.0.415/Sdks/Microsoft.NET.Sdk/analyzers/Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll]
+build_metadata.Analyzer.ItemType = Analyzer
+build_metadata.Analyzer.NuGetPackageId = 
+
+[C:/Program Files/dotnet/sdk/8.0.415/Sdks/Microsoft.NET.Sdk/analyzers/Microsoft.CodeAnalysis.NetAnalyzers.dll]
+build_metadata.Analyzer.ItemType = Analyzer
+build_metadata.Analyzer.NuGetPackageId = 
+
+[C:/Users/15477/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.1/analyzers/dotnet/roslyn4.0/cs/Microsoft.Extensions.Logging.Generators.dll]
+build_metadata.Analyzer.ItemType = Analyzer
+build_metadata.Analyzer.NuGetPackageId = Microsoft.Extensions.Logging.Abstractions
+
+[C:/Users/15477/.nuget/packages/thisassembly.constants/2.0.6/analyzers/dotnet/roslyn4.0/cs/ThisAssembly.Constants.dll]
+build_metadata.Analyzer.ItemType = Analyzer
+build_metadata.Analyzer.NuGetPackageId = ThisAssembly.Constants
+
+[C:/Program Files/dotnet/packs/Microsoft.NETCore.App.Ref/6.0.36/analyzers/dotnet/cs/System.Text.Json.SourceGeneration.dll]
+build_metadata.Analyzer.ItemType = Analyzer
+build_metadata.Analyzer.NuGetPackageId = Microsoft.NETCore.App.Ref
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/IsDirtyString]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = true
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/IsDirty]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = true
+build_metadata.Constant.Type = bool
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/RepositoryUrl]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = https://github.com/HmozuhtoheG/AstralStopoverPort.git
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/Branch]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = ASP
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/Commit]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 63adc27d
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/Sha]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 63adc27db2261f45a1ebb35617958164a3f8b9f1
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/CommitDate]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 2025-10-26T22:58:08+08:00
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/Commits]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 1
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/Tag]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = v3.2.1-1-g63adc27d
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/BaseTag]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = v3.2.1
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/BaseVersion.Major]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 3
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/BaseVersion.Minor]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 2
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/BaseVersion.Patch]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 1
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/SemVer.Major]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 3
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/SemVer.Minor]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 2
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/SemVer.Patch]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 2
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/SemVer.Label]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/SemVer.DashLabel]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = 
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
+
+[C:/Users/15477/source/repos/AstralStopoverPort/TONX/SemVer.Source]
+build_metadata.Constant.ItemType = Constant
+build_metadata.Constant.Comment = 
+build_metadata.Constant.Value = Tag
+build_metadata.Constant.Type = 
+build_metadata.Constant.Root = Git
+build_metadata.Constant.RootComment = 
