@@ -41,6 +41,7 @@ public sealed class Ldwy : RoleBase, IKiller
     private bool isMaking = false;
     private float makeTime = 0f;
     private const float MakeDuration = 120f;
+    private static Dictionary<byte, bool> TempVoteAdd = new();
 
     public override void Add()
     {
@@ -94,20 +95,25 @@ public sealed class Ldwy : RoleBase, IKiller
     public bool OnCheckMurderAsKiller(MurderInfo info)
     {
         var target = info.AttemptTarget;
-        // 当有肉丸时，点击杀键给予他人肉丸
         if (Meatball > 0)
         {
-            target.Notify(Utils.ColorString(Color.yellow, "您收到了一个肉丸（似乎票数出现了改变？）"));
+            target.Notify(Utils.ColorString(Color.yellow, GetString("LdwyReceiveMeatball")));
+            TempVoteAdd[target.PlayerId] = true;
             Meatball--;
             if (Meatball == 0)
             {
-                Player.Notify(Utils.ColorString(Color.green, "您可以开始执法了..."));
+                Player.Notify(Utils.ColorString(Color.green, GetString("LdwyMeatballExhausted")));
             }
-            return false; 
+            return false;
         }
 
-        // 没有肉丸时，执行原击杀逻辑
         var targetRole = target.GetCustomRole();
+        if (k >= 1 && targetRole.IsCrewmate())
+        {
+            PlayerState.GetByPlayerId(Player.PlayerId).DeathReason = CustomDeathReason.Suicide;
+            Player.RpcMurderPlayer(Player);
+            return false;
+        }
         if (k == 1 && (targetRole.IsImpostor() || targetRole.IsNeutral()))
         {
             k--;
@@ -120,7 +126,18 @@ public sealed class Ldwy : RoleBase, IKiller
             Player.Notify(Utils.ColorString(Color.red, GetString("KillerNoKillChance")));
             return false;
         }
+
         return false;
+    }
+
+    public override (byte? votedForId, int? numVotes, bool doVote) ModifyVote(byte voterId, byte sourceVotedForId, bool isIntentional)
+    {
+        var (votedForId, numVotes, doVote) = base.ModifyVote(voterId, sourceVotedForId, isIntentional);
+        if (TempVoteAdd.TryGetValue(voterId, out bool hasAdd) && hasAdd)
+        {
+            numVotes = 2; 
+        }
+        return (votedForId, numVotes, doVote);
     }
 
     public override void NotifyOnMeetingStart(ref List<(string, byte, string)> msgToSend)
@@ -142,12 +159,12 @@ public sealed class Ldwy : RoleBase, IKiller
         if (isMaking)
         {
             float remaining = MakeDuration - (Time.time - makeTime);
-            Player.Notify(Utils.ColorString(Color.yellow, $"制作中...{Mathf.CeilToInt(remaining)}秒"));
+            Player.Notify(Utils.ColorString(Color.yellow, string.Format(GetString("LdwyMakingInProgress"), Mathf.CeilToInt(remaining))));
             return false;
         }
         isMaking = true;
         makeTime = Time.time;
-        Player.Notify(Utils.ColorString(Color.yellow, "开始制作肉丸...(2分钟)"));
+        Player.Notify(Utils.ColorString(Color.yellow, GetString("LdwyStartMakeMeatball")));
         new LateTask(() =>
         {
             if (isMaking)
@@ -155,7 +172,7 @@ public sealed class Ldwy : RoleBase, IKiller
                 isMaking = false;
                 Meatball--;
                 k++;
-                Player.Notify(Utils.ColorString(Color.green, $"获得1次击杀机会，剩余使用次数：{Meatball}"));
+                Player.Notify(Utils.ColorString(Color.green, string.Format(GetString("LdwyGetKillChance"), Meatball)));
                 SendRPC();
             }
         }, MakeDuration, "MeatballMake");
@@ -186,8 +203,8 @@ public sealed class Ldwy : RoleBase, IKiller
         if (isMaking)
         {
             float remaining = MakeDuration - (Time.time - makeTime);
-            return Utils.ColorString(Color.yellow, $"制作中: {Mathf.CeilToInt(remaining)}s");
+            return Utils.ColorString(Color.yellow, string.Format(GetString("LdwyMaking"), Mathf.CeilToInt(remaining)));
         }
-        return Utils.ColorString(Color.green, $"剩余次数: {Meatball}");
+        return Utils.ColorString(Color.green, string.Format(GetString("LdwyRemainingMeatball"), Meatball));
     }
 }
