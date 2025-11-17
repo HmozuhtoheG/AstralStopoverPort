@@ -121,6 +121,7 @@ public static class Options
     public static OptionItem NGuesserCanBeMadmate;
     public static OptionItem SnitchCanBeMadmate;
     public static OptionItem JudgeCanBeMadmate;
+    public static OptionItem SwapperCanBeMadmate;
     public static OptionItem MadSnitchTasks;
 
     //// 游戏设置 ////
@@ -1176,6 +1177,7 @@ public static class Options
         MadSnitchTasks = IntegerOptionItem.Create(id + 16, "MadSnitchTasks", new(1, 99, 1), 3, TabGroup.Addons, false).SetParent(SnitchCanBeMadmate)
             .SetValueFormat(OptionFormat.Pieces);
         JudgeCanBeMadmate = BooleanOptionItem.Create(id + 17, "JudgeCanBeMadmate", false, TabGroup.Addons, false).SetParent(spawnOption);
+        SwapperCanBeMadmate = BooleanOptionItem.Create(id + 18, "SwapperCanBeMadmate", false, TabGroup.Addons, false).SetParent(spawnOption);
 
         CustomRoleSpawnChances.Add(role, spawnOption);
         CustomRoleCounts.Add(role, countOption);
