@@ -26,7 +26,7 @@ We appreciate the hard work of our translators! If you'd like to contribute a tr
 ---
 
 ## 🤝 Contributing  
-Got ideas or found a bug? We welcome contributions! Check out our [Contributing Guidelines](CONTRIBUTING.md) (coming soon) to get started.  
+Got ideas or found a bug? Join our Discord server group Feedback!
 
 ---
 
