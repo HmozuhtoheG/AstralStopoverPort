@@ -273,6 +273,14 @@ public abstract class RoleBase : IDisposable
     /// <returns>false: 忽略本次投票，不计入数据</returns>
     //public virtual bool OnVote(byte voterId, byte sourceVotedForId, ref byte roleVoteFor, ref int roleNumVotes, ref bool clearVote) => true;
 
+
+    /// <summary>
+    /// 投票结束时调用<br/>
+    /// 此时你还可以对投票进行修改<br/>
+    /// </summary>
+    public virtual void OnVotingComplete()
+    { }
+
     /// <summary>
     /// 驱逐玩家后调用的函数
     /// </summary>
