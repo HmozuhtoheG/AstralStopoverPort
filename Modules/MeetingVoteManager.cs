@@ -2,6 +2,8 @@
 using System.Linq;
 using ASP.Roles.AddOns.Common;
 using ASP.Roles.AddOns.Impostor;
+using ASP.Roles.Core.Interfaces;
+using ASP.Roles.Crewmate;
 
 namespace ASP.Modules;
 
@@ -24,6 +26,7 @@ public class MeetingVoteManager
     public static void Start()
     {
         _instance = new();
+        Swappers = new();
     }
 
     /// <summary>
@@ -99,6 +102,10 @@ public class MeetingVoteManager
         }
     }
     /// <summary>
+    /// 换票师换票记录
+    /// </summary>
+    public static List<Swapper> Swappers = new();
+    /// <summary>
     /// 如果会议时间耗尽或每个人都已投票，则结束会议
     /// </summary>
     public void CheckAndEndMeeting()
@@ -114,7 +121,7 @@ public class MeetingVoteManager
     /// <param name="applyVoteMode">是否应用投票的设置</param>
     public void EndMeeting(bool applyVoteMode = true)
     {
-        CustomRoleManager.OnVotingComplete();
+        CustomRoleManager.AllActiveRoles.Values.OfType<IVoteModifier>().OrderBy(m => m.ModifyPriority).ToList().Do(p => p.ModifyVoteAfterVoting());
         var result = CountVotes(applyVoteMode);
         var logName = result.Exiled == null ? (result.IsTie ? "平票" : "跳过") : result.Exiled.Object.GetNameWithRole();
         logger.Info($"会议结束，结果：{logName}");
@@ -248,6 +255,7 @@ public class MeetingVoteManager
     public void Destroy()
     {
         _instance = null;
+        Swappers = new();
     }
 
     public static string GetVoteName(byte num)
