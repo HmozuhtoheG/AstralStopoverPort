@@ -34,17 +34,17 @@ public class Main : BasePlugin
     // == 版本相关设定 / Version Config ==
     public const string LowestSupportedVersion = "2025.17.0.1"; // 17.0.1 //2025.10.14
     public static readonly bool IsPublicAvailableOnThisVersion = false;
-    public const string PluginVersion = "0.0.1";
+    public const string PluginVersion = "0.0.4";
     public const int PluginCreation = 1;
     // == 链接相关设定 / Link Config ==
     public static readonly bool ShowWebsiteButton = false;
    // public static readonly string WebsiteUrl = IsChineseLanguageUser ? "https://asp.cc/zh" : "https://asp.cc";
     public static readonly bool ShowQQButton = false;
   //  public static readonly string QQInviteUrl = "https://jq.qq.com/?_wv=1027&k=2RpigaN6";
-    public static readonly bool ShowDiscordButton = false;
-  //  public static readonly string DiscordInviteUrl = "https://discord.gg/hkk2p9ggv4";
+    public static readonly bool ShowDiscordButton = true;
+    //  public static readonly string DiscordInviteUrl = "https://discord.gg/RfCn5U3jKb";
     public static readonly bool ShowGithubUrl = true;
-    public static readonly string GithubRepoUrl = "https://github.com/HmozuhtoheG/AstralStopoverPort?tab=readme-ov-file";
+    public static readonly string GithubRepoUrl = "https://github.com/HmozuhtoheG/AstralStopoverPort";
     // ==========
 
     public Harmony Harmony { get; } = new Harmony(PluginGuid);
@@ -89,6 +89,8 @@ public class Main : BasePlugin
     public static Dictionary<byte, Color32> PlayerColors = new();
     public static Dictionary<byte, CustomDeathReason> AfterMeetingDeathPlayers = new();
     public static Dictionary<CustomRoles, string> roleColors;
+    public static Dictionary<byte, string> RolesRecord = new();
+    public static bool CanRecord = false;
     public static List<byte> winnerList = new();
     public static List<string> winnerNameList = new();
     public static List<int> clientIdList = new();
