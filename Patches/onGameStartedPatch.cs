@@ -52,8 +52,8 @@ internal class ChangeRoleSettings
 
             Main.LastNotifyNames = new();
 
-            Utils.RolesRecord = new();
-            Utils.CanRecord = false;
+            Main.RolesRecord = new();
+            Main.CanRecord = false;
 
             Main.PlayerColors = new();
             //名前の記録
@@ -252,8 +252,8 @@ internal class SelectRolesPatch
                     break;
             }
 
-            Utils.CanRecord = RoleDraftManager.RoleDraftState == RoleDraftState.None;
-            if (Utils.CanRecord) foreach (var pc in Main.AllPlayerControls) Utils.RecordPlayerRoles(pc.PlayerId);
+            Main.CanRecord = RoleDraftManager.RoleDraftState == RoleDraftState.None;
+            if (Main.CanRecord) foreach (var pc in Main.AllPlayerControls) Utils.RecordPlayerRoles(pc.PlayerId);
             AmongUsClient.Instance.StartCoroutine(CoEndAssign().WrapToIl2Cpp()); // 准备进入IntroCutscene
         }
         catch (Exception ex)
@@ -274,7 +274,7 @@ internal class SelectRolesPatch
             pc.Data.MarkDirty();
             AmongUsClient.Instance.SendAllStreamedObjects();
         }
-        Logger.Info("Set Disconnected", "CoAssignForSelf");
+        Logger.Info("Set Disconnected", "CoEndAssign");
         yield return new WaitForSeconds(1.0f);
 
         foreach (var (player, role) in RoleResult) // 给玩家自己注册职业
@@ -287,7 +287,7 @@ internal class SelectRolesPatch
             if (player.PlayerId == 0) player.SetRole(RoleTypes.Crewmate, true);
             else player.RpcSetRoleDesync(RoleTypes.Crewmate, player.GetClientId());
         }
-        Logger.Info("Assign Self", "CoAssignForSelf");
+        Logger.Info("Assign Self", "CoEndAssign");
         yield return new WaitForSeconds(0.5f);
 
         foreach (var pc in Main.AllPlayerControls)
@@ -300,7 +300,7 @@ internal class SelectRolesPatch
                 AmongUsClient.Instance.SendAllStreamedObjects();
             }
         }
-        Logger.Info("Restore Disconnect Data", "CoAssignForSelf");
+        Logger.Info("Restore Disconnect Data", "CoEndAssign");
         yield return new WaitForSeconds(1.0f);
 
         GameOptionsSender.AllSenders.Clear();
