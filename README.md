@@ -8,7 +8,7 @@ This project is a **brand-new branch based on the TONX mod**, developed and acti
 
 ---
 
-## ⚠️ Disclaimer  
+## Description 
 This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC. 
 
 ---
