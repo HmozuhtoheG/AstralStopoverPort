@@ -1214,13 +1214,12 @@ public static class Utils
         };
         Process.Start(startInfo);
     }
-    public static Dictionary<byte, string> RolesRecord = new();
-    public static bool CanRecord = false;
+
     public static void RecordPlayerRoles(byte id)
     {
-        if (!CanRecord) return;
-        if (!RolesRecord.TryAdd(id, "")) RolesRecord[id] += " → ";
-        RolesRecord[id] = RolesRecord[id] + GetTrueRoleName(id, false) + GetSubRolesText(id);
+        if (!Main.CanRecord) return;
+        if (!Main.RolesRecord.TryAdd(id, "")) Main.RolesRecord[id] += " → ";
+        Main.RolesRecord[id] = Main.RolesRecord[id] + GetTrueRoleName(id, false) + GetSubRolesText(id);
         RPC.SyncRolesRecord();
     }
     public static List<string> ChatSummary = Enumerable.Repeat(string.Empty, 15).ToList();
@@ -1239,7 +1238,7 @@ public static class Utils
             builder.Append(' ').Append(GetKillCountText(id).RemoveColorTags());
             builder.Append(' ').Append(GetVitalText(id));
         }
-        builder.Append(' ').Append(RolesRecord.ContainsKey(id) ? RolesRecord[id].RemoveColorTags() : "");
+        builder.Append(' ').Append(Main.RolesRecord.ContainsKey(id) ? Main.RolesRecord[id].RemoveColorTags() : "");
         ChatSummary[id] = builder.ToString();
         builder = new StringBuilder();
         // 用玩家中最长的名字长度计算玩家名字后的文字的水平位置
@@ -1268,7 +1267,7 @@ public static class Utils
         }
         else pos += 6.5f;
         builder.AppendFormat("<pos={0}em>", pos);
-        builder.Append(RolesRecord.ContainsKey(id) ? RolesRecord[id] : "");
+        builder.Append(Main.RolesRecord.ContainsKey(id) ? Main.RolesRecord[id] : "");
         builder.Append("</pos>");
         return builder.ToString();
     }
