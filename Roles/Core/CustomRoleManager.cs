@@ -277,6 +277,11 @@ public static class CustomRoleManager
         if (Fool.OptionImpFoolCanNotSabotage.GetBool() && player.Is(CustomRoles.Fool) && player.IsImp()) cancel = true;
         return !cancel;
     }
+    public static void OnVotingComplete()
+    {
+        foreach (var roleClass in AllActiveRoles.Values) roleClass.OnVotingComplete();
+    }
+
     // ==初始化处理 ==
     [GameModuleInitializer]
     public static void Initialize()
@@ -631,6 +636,7 @@ public enum CustomRoles
     Observer,
     DoveOfPeace,
     Collator,
+    Swapper,
     Ldwy,
     //Neutral
     Arsonist,
@@ -658,7 +664,6 @@ public enum CustomRoles
     Succubus,
     PlagueDoctor,
     SchrodingerCat,
-    Swapper,
 
     //SoloKombat
     KB_Normal = 400,
