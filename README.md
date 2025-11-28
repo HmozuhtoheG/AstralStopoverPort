@@ -19,9 +19,9 @@ We appreciate the hard work of our translators! If you'd like to contribute a tr
 | Language          | Translator       |
 |--------------------|--------------------|
 | Simplified Chinese | HAHABRO            |
-| Japanese           | None               |
-| Traditional Chinese| None               |
-| English            | None               |
+| Japanese           | Contributor        |
+| Traditional Chinese| Contributor        |
+| English            | Contributor        |
 
 ---
 
